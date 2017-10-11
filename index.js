@@ -1,7 +1,7 @@
 var draw = SVG('drawing');
 
 
-axios.get('/freelance.svg')
+axios.get('/order/freelance.svg')
 .then((data)=> drawing(data.data))
 
 var inter;
