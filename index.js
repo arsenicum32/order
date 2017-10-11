@@ -31,17 +31,17 @@ function drawing(svg){
     front.scale(0.7, 1);
 
 
-    var rect = draw.rect(97,67);
-    rect.back()
-
-    var rect2 = draw.rect(47,237);
+    // var rect = draw.rect(97,67);
+    // rect.back()
+    //
+    // var rect2 = draw.rect(47,237);
 
     //var el = draw.circle(60);
 
     //el.back()
 
-    rect.opacity(0)
-    rect2.opacity(0)
+  //  rect.opacity(0)
+    //rect2.opacity(0)
     //el.opacity(0)
 
     //rect.toParent(body)
@@ -49,8 +49,8 @@ function drawing(svg){
     //el.toParent(body)
 
 
-    rect.delay(interval*.1).animate(20).opacity(1)
-    rect2.delay(interval*.1).animate(20).opacity(1)
+  //  rect.delay(interval*.1).animate(20).opacity(1)
+    //rect2.delay(interval*.1).animate(20).opacity(1)
     //el.delay(interval*.1).animate(20).opacity(1)
 
     //el.move(427, 370)
@@ -60,22 +60,22 @@ function drawing(svg){
 
 
 
-    rect2.move(390,163).radius(11).fill('#F2A01C') //.delay(interval*.1)
-    .animate(interval).move(220, 163).opacity(1)
-    rect2.back();
+    // rect2.move(390,163).radius(11).fill('#F2A01C') //.delay(interval*.1)
+    // .animate(interval).move(220, 163).opacity(1)
+    // rect2.back();
 
 
 
     //el.animate(interval).move(220, 370).opacity(1)
 
-    rect.radius(16)
-    .move(390, 390)
-    .fill('#F2A01C')
-    //.delay(interval*.1)
-    .animate(interval).move(220, 390).opacity(1).after((e)=>{
-      rect.remove()
-      rect2.remove()
-    })
+    // rect.radius(16)
+    // .move(390, 390)
+    // .fill('#F2A01C')
+    // //.delay(interval*.1)
+    // .animate(interval).move(220, 390).opacity(1).after((e)=>{
+    //   rect.remove()
+    //   rect2.remove()
+    // })
     //console.log(rect);
     //SVG.get(rect.attr('id')).remove()
     //pathK.delay(500).attr('d', 'M350,132l-14-5c0,0-5-2-6,4h-4c0,0-2-6-12-7l-23-1c0,0-2-4-8-4s-23,0-23,0s-25-8-29-14h-23c0,0-11,5-11,19l-1,26h22l2,7l9-7c0,0,26-4,33-2s26,4,29,1h18v8c0,0,3,3,5,3v4l3,2c0,0,14,3,20,1l4-8h4c0,0,7-4,7-15C352,144,352,138,350,132zM329,143c-4,0-3-3-3-3h5C331,140,333,143,329,143z');
