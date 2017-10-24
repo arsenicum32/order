@@ -87,7 +87,7 @@ function drawing(svg){
 
 
     //body.animate(interval).opacity(0)
-    left.animate(interval).move(-(105-MX), 0)
+    left.animate(interval*.8).move(-(105-MX), 0)
     .scale(0, 1)
     .transform({ rotation: -60 , cx: 280, cy: 140 }).after(()=>{
 
@@ -96,9 +96,9 @@ function drawing(svg){
     })
 
 
-  //  middle.delay(500).animate(1).opacity(1)
+    middle.delay(500).animate(1).opacity(1)
 
-// middle.delay(100).animate(interval*.6).move(-(-MX+30), 0).scale(0, 1).opacity(0)
+    middle.delay(100).animate(interval*.6).move(-(-MX+30), 0).scale(0, 1).opacity(0)
 
     body.animate(interval).move(MX, 0).scale(0, 1);
 
