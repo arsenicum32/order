@@ -1,42 +1,22 @@
-# установка счетчика на сервер
+# установка счетчика на VPS сервер
+##пример с sentOS
 
-Текущий адрес API: http://cardback.penchat.ru
-
-Для того чтобы счетчик считал посещения и среднее время на сайте необходимо 
-поставить скрипт в body :
-
-```html
-<script>
-window.onload = function(){
-  $.get('http://cardback.penchat.ru/open/' + USER_ID )
-}
-window.onbeforeunload = function(){
-  $.get('http://cardback.penchat.ru/leave/' + USER_ID )
-}
-</script>
+1) Необходимо разместить на сервере файлы из архива в папки server и card соответственно 
+2) установить на сервер nodejs и npm 
 ```
-
-Где USER_ID - уникальный id пользователя
-
-Для того, чтобы считать колличество сформированных отчетов и загрузок необходимо 
-установить следующие запросы в handle кнопок:
-
-```js
-$(BUTTON_ID_FORM).on('click', function(){
-  // что-то делаем с отчетом
-  // затем отправляем данные 
-  $.get('http://cardback.penchat.ru/form/' + USER_ID)
-})
-
-$(BUTTON_ID_LOAD).on('click', function(){
-  // что-то делаем с отчетом
-  // затем отправляем данные 
-  $.get('http://cardback.penchat.ru/load/' + USER_ID)
-})
+sudo yum install nodejs
+sudo yum install npm
 ```
-
-где BUTTON_ID_FORM и BUTTON_ID_LOAD соответствующие кнопки для формирования и загрузки отчета
-
-Все запросы на червер делаются через GET!
-
+3) зайти в папки server, затем card и выполнить команду
+```
+npm i
+```
+4) затем зайти в папку server и установить менеджер пакетов
+```
+npm i -g pm2
+```
+5) после чего запустить сервер
+```
+pm2 start app.js
+```
 
